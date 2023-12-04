@@ -60,7 +60,7 @@ function CountryDetail({ allCountries }) {
         </div>
       </div>
       <main
-        className={`w-full justify-between ${
+        className={`w-full h-screen justify-between ${
           lightMode ? "bg-gray-100 text-black" : "bg-slate-700 text-white"
         } sm:px-[60px] px-[20px] pb-6 pt-24`}
       >
