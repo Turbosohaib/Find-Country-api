@@ -66,7 +66,7 @@ function CountryDetail({ allCountries }) {
       >
         <div className="sm:flex sm:mt-12 mt-6">
           <img
-            className="aspect-[271/177] h-[250px]"
+            className="aspect-[271/177] h-[300px]"
             src={country.flags.svg}
             alt="Flag"
           />
@@ -129,7 +129,7 @@ function CountryDetail({ allCountries }) {
               </div>
             </div>
             <div className="sm:mt-14 mt-4">
-              <p className="flex items-center">
+              <div className="flex items-center">
                 {" "}
                 <span className="font-medium">Border Countries:</span>{" "}
                 <div className="px-2 sm:flex grid grid-cols-3">
@@ -148,7 +148,7 @@ function CountryDetail({ allCountries }) {
                     );
                   })}
                 </div>
-              </p>
+              </div>
             </div>
           </div>
         </div>
