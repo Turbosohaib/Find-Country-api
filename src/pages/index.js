@@ -68,7 +68,7 @@ export default function Home({ allCountries }) {
               <img
                 className="w-full aspect-[271/177]"
                 src={country.flags.svg}
-                alt={country.flags.alt}
+                alt="Flag"
               />
               <div
                 className={`${
