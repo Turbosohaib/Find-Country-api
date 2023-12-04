@@ -4,10 +4,11 @@ import SearchCountry from "@/_components/SearchCountry";
 import SearchRegion from "@/_components/SearchRegion";
 import { useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export async function getServerSideProps() {
+export function getServerSideProps() {
   const data = require("../../data.json");
   return {
     props: {
@@ -25,6 +26,9 @@ export default function Home({ allCountries }) {
 
   return (
     <>
+      <Head>
+        <title>Find Countries</title>
+      </Head>
       <div className="fixed z-10 w-full items-center justify-between">
         <Header lightMode={lightMode} setLightMode={setLightMode} />
         <div
@@ -47,14 +51,14 @@ export default function Home({ allCountries }) {
         </div>
       </div>
       <main
-        className={`sm:grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 sm:px-[60px] px-[5px] pb-12 sm:pt-52 pt-80 ${
+        className={`sm:grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 sm:px-[60px] px-[5px] pb-12 sm:pt-52 pt-72 ${
           lightMode ? "bg-gray-100 text-black" : "bg-slate-700 text-white"
-        } items-center justify-between ${inter.className}`}
+        } items-center justify-between h-full ${inter.className}`}
       >
         {countries.map((country, index) => (
           <Link
             href={`/[countryCode]`}
-            as={`/${country.alpha3Code}`}
+            as={`/${country.alpha2Code}`}
             key={index}
           >
             <div

@@ -14,10 +14,10 @@ export default function Header({
     <nav
       className={`flex justify-between w-full ${
         lightMode ? "bg-white text-black" : "bg-slate-600 text-white"
-      } items-center shadow-lg sm:px-[70px] px-[20px] py-2`}
+      } items-center shadow-lg sm:px-[70px] px-[20px] py-3`}
     >
       <Link href="/">
-        <h1 className="sm:text-3xl text-lg">Where in the world?</h1>
+        <h1 className="sm:text-2xl font-bold text-lg">Where in the world?</h1>
       </Link>
       {lightMode ? (
         <div

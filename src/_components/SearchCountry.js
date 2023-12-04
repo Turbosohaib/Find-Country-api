@@ -6,20 +6,22 @@ export default function Country({ lightMode, allCountries, setCountries }) {
 
   const handleSubmit = async (e) => {
     if (e.key === "Enter") {
-      const country = allCountries.filter(
-        (country) => countryName == country.name
+      const lowerCaseCountryName = countryName.toLowerCase();
+      const filteredCountries = allCountries.filter((country) =>
+        country.name.toLowerCase().includes(lowerCaseCountryName)
       );
-      console.log(country);
-      setCountries(country);
+      console.log(filteredCountries);
+      setCountries(filteredCountries);
     }
   };
 
   const handleMobileSubmit = async () => {
-    const country = allCountries.filter(
-      (country) => countryName == country.name
+    const lowerCaseCountryName = countryName.toLowerCase();
+    const filteredCountries = allCountries.filter((country) =>
+      country.name.toLowerCase().includes(lowerCaseCountryName)
     );
-    console.log(country);
-    setCountries(country);
+    console.log(filteredCountries);
+    setCountries(filteredCountries);
   };
 
   return (
