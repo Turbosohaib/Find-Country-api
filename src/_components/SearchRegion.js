@@ -23,9 +23,9 @@ export default function Region({ lightMode, allCountries, setCountries }) {
   };
 
   const handleRegionSelect = async (region) => {
-    console.log("Region: ", region);
     const regionalCountries = allCountries.filter((c) => c.region == region);
     setCountries(regionalCountries);
+    setSelectedRegion(region);
     setDropdown(false);
   };
 
